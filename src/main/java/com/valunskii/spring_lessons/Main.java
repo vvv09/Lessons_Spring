@@ -1,11 +1,14 @@
 package com.valunskii.spring_lessons;
 
-import com.valunskii.spring_lessons.domain.TerminatorQuoter;
+import com.valunskii.spring_lessons.domain.Quoter;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
-        context.getBean(TerminatorQuoter.class).sayQuote();
+        while (true) {
+            context.getBean(Quoter.class).sayQuote();
+            Thread.sleep(1000L);
+        }
     }
 }

@@ -1,5 +1,6 @@
 package com.valunskii.spring_lessons.domain;
 
+@Profiling
 public class TerminatorQuoter implements Quoter {
 
     @InjectRandomInt(min=2, max=8)
