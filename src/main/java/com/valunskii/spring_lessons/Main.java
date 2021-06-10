@@ -13,14 +13,15 @@ public class Main {
         ApplicationContext context =
                 new AnnotationConfigApplicationContext(MyConfig.class);
 
-        //три разных способа получения бинов
         Cat cat = (Cat) context.getBean("getCat"); //нужно указывать имя, т.к. неоднозначно, поскольку есть бин, возвращающий родительский тип Animals. так же в Animals
+        Cat catAuto = (Cat) context.getBean("cat");
         Dog dog = (Dog) context.getBean("dog");
         Parrot parrot = context.getBean("parrot-kesha", Parrot.class);
 
         System.out.println(cat.getName());
         System.out.println(dog.getName());
         System.out.println(parrot.getName());
+        System.out.println(catAuto.getName() + " (дослали автоматически)");
 
         Animal animal = context.getBean("polymorphism", Animal.class);
         System.out.println("Животное дня - " + animal.getName());

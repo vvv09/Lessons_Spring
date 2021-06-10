@@ -2,6 +2,7 @@ package com.valunskii.spring_lessons.domain;
 
 import org.springframework.stereotype.Component;
 
+@Component
 public class Cat implements Animal{
     private String name = "Мурзик";
 
