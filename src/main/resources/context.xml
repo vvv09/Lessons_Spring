@@ -6,6 +6,7 @@
 
     <bean class="com.valunskii.spring_lessons.domain.PostProxyInvokerContextListener"/>
     <bean class="com.valunskii.spring_lessons.domain.ProfilingHandlerBeanPostProcessor"/>
+    <bean class="com.valunskii.spring_lessons.domain.DeprecationHandlerBeanFactoryPostProcessor"/>
     <bean class="com.valunskii.spring_lessons.domain.InjectRandomIntAnnotationBeanPostProcessor"/>
 
     <context:annotation-config></context:annotation-config>

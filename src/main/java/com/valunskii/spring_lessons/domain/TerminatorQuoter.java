@@ -1,5 +1,6 @@
 package com.valunskii.spring_lessons.domain;
 
+@DeprecatedClass(newImpl = T1000.class)
 @Profiling
 public class TerminatorQuoter implements Quoter {
 
