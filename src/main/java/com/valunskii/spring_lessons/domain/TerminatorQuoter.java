@@ -9,8 +9,10 @@ public class TerminatorQuoter implements Quoter {
     private String message;
 
     @Override
+    @PostProxy
     public void sayQuote() {
-            System.out.println("message = " + message + " - repeated " + repeat + " times.");
+        System.out.println("Phase 3: Вызов метода через ApplicationListener по событию Refresh context");
+        System.out.println("message = " + message + " - repeated " + repeat + " times.");
     }
 
     public String getMessage() {

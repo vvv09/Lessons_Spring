@@ -4,8 +4,11 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
+    <bean class="com.valunskii.spring_lessons.domain.PostProxyInvokerContextListener"/>
     <bean class="com.valunskii.spring_lessons.domain.ProfilingHandlerBeanPostProcessor"/>
     <bean class="com.valunskii.spring_lessons.domain.InjectRandomIntAnnotationBeanPostProcessor"/>
+
+    <context:annotation-config></context:annotation-config>
 
     <bean class="com.valunskii.spring_lessons.domain.TerminatorQuoter" id="terminatorQuoter" init-method="init">
         <property name="message" value="I'll be back"/>

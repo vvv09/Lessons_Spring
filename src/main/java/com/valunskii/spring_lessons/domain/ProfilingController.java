@@ -2,7 +2,7 @@ package com.valunskii.spring_lessons.domain;
 
 public class ProfilingController implements ProfilingControllerMBean {
 
-    private boolean enable;
+    private boolean enable = true;
 
     public boolean isEnable() {
         return enable;
