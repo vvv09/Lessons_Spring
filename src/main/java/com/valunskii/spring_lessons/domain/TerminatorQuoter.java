@@ -4,6 +4,7 @@ package com.valunskii.spring_lessons.domain;
 @Profiling
 public class TerminatorQuoter implements Quoter {
 
+
     @InjectRandomInt(min=2, max=8)
     private int repeat;
 
@@ -23,6 +24,16 @@ public class TerminatorQuoter implements Quoter {
     public void setMessage(String message) {
         this.message = message;
     }
+
+    /* Нет постпроцессоров, некому обрабатывать аннотацию @InjectRandomInt */
+    public int getRepeat() {
+        return repeat;
+    }
+
+    public void setRepeat(int repeat) {
+        this.repeat = repeat;
+    }
+    /* ------------------------------------------------------------------- */
 
     public TerminatorQuoter() {
         System.out.println("Phase 1: Spring через Reflection вызвал конструктор класса для создания бина");
